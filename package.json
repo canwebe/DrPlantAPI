@@ -1,0 +1,25 @@
+{
+  "name": "drplantapi",
+  "version": "1.0.0",
+  "description": "````MongoDB\r nodejs\r express\r axios```\r ````",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canwebe/DrPlantAPI.git"
+  },
+  "author": "kaushik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/canwebe/DrPlantAPI/issues"
+  },
+  "homepage": "https://github.com/canwebe/DrPlantAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
+  }
+}
