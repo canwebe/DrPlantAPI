@@ -1,25 +1,37 @@
 const mongoose = require('mongoose')
 
 
-const alienSchema = new mongoose.Schema({
+const alienSchema = mongoose.Schema({
+
+
+
+    // name: '',
+    // desc: '',
+    // cause: '',
+    // remedy: '',
+
 
     name: {
         type: String,
-        required: true
+        // required: true,
+
     },
     desc: {
         type: String,
-        required: true
+        // required: true,
+        trim: true
     },
     cause: {
         type: String,
-        required: true
+        // required: true,
+
     },
     remedy: {
         type: String,
-        required: true
+        // required: true,
+
     }
- 
+
 
 })
 

@@ -25,12 +25,12 @@ router.get('/:id', async (req, res) => {
 
 
 
-//post request method
-router.post('/', async (req, res) => {
+//post request method ..
+router.post('/', async (req , res) => {
     const alien = new Alien({
         name: req.body.name,
         desc: req.body.desc,
-        cause:req.body.cause,
+        cause: req.body.cause,
         remedy: req.body.remedy
     })
 
