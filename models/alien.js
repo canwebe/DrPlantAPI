@@ -9,7 +9,7 @@ const alienSchema = mongoose.Schema({
     // desc: '',
     // cause: '',
     // remedy: '',
-
+//if anyone want to add Schema you can
 
     name: {
         type: String,
