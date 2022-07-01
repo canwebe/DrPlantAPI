@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
         res.send('Error' + err)
     }
 })
-//post request method
+// post request method
 router.patch('/:id', async (req, res) => {
     try {
         const alien = await Alien.findById(req.params.id)
