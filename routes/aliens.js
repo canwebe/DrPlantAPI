@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
 
 
 //post request method ..
-router.post('/', async (req, res) => {
+router.post('/', async (req , res) => {
     const alien = new Alien({
         name: req.body.name,
         desc: req.body.desc,
