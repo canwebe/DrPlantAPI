@@ -11,6 +11,10 @@ const alienSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    cause: {
+        type: String,
+        required: true
+    },
     remedy: {
         type: String,
         required: true

@@ -1,18 +1,19 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const url = 'mongodb+srv://kaushikd:database@cluster0.r90ag.mongodb.net/?retryWrites=true&w=majority'
+const url = 'mongodb+srv://disease:database@cluster0.ucprhxb.mongodb.net/?retryWrites=true&w=majority'
+
+
 const bodyParser = require("body-parser")
 const app = express()
 
 mongoose.connect(url, {
     useNewUrlParser: true,
-    useCreateIndex: true,
     useUnifiedTopology: true,
-    useFindAndModify: false
+   
 }).then(() => {
     console.log('connection successful');
 }).catch((err) => {
-    console.log('no connection')
+    console.log(err)
 })
 const con = mongoose.connection
 
