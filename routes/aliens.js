@@ -1,6 +1,6 @@
-const express = require('express')
-const router = express.Router()
-const Alien = require('../models/alien')
+const express = require('express');
+const router = express.Router();
+const Alien = require('../models/alien');
 
 
 //get request method
@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
 })
 //get request by id
 router.get('/:id', async (req, res) => {
+
     try {
         const alien = await Alien.findById(req.params.id)
         res.json(alien)
@@ -26,13 +27,14 @@ router.get('/:id', async (req, res) => {
 
 
 //post request method ..
-router.post('/', async (req , res) => {
+router.post('/', async (req, res) => {
+    console.log(req.body)
     const alien = new Alien({
         name: req.body.name,
         desc: req.body.desc,
         cause: req.body.cause,
         remedy: req.body.remedy
-    })
+    });
 
     try {
         const a1 = await alien.save()

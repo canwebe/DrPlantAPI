@@ -1,15 +1,14 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const url = 'mongodb+srv://disease:database@cluster0.ucprhxb.mongodb.net/?retryWrites=true&w=majority'
-
-
+const bodyParser = require("body-parser");
+const dotenv = require('dotenv').config()
 
 const app = express()
 
-mongoose.connect(url, {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-   
+
 }).then(() => {
     console.log('connection successful');
 }).catch((err) => {
@@ -26,10 +25,10 @@ app.use(express.json())
 const alienRouter = require('./routes/aliens')
 app.use('/disease', alienRouter)
 
-const bodyParser = require("body-parser")
+const PORT = process.env.PORT || 5000
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log("Server is running");
 })
