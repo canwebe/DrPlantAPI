@@ -10,29 +10,28 @@ const alienSchema = mongoose.Schema({
     // cause: '',
     // remedy: '',
 //if anyone want to add Schema you can
-
     name: {
-        type: String,
+        type: String
         // required: true,
 
     },
     desc: {
-        type: String,
+        type: String
         // required: true,
-        trim: true
+      
     },
     cause: {
-        type: String,
+        type: String
         // required: true,
 
     },
     remedy: {
-        type: String,
+        type: String
         // required: true,
 
     }
 
-
 })
+
 
 module.exports = mongoose.model('Alien', alienSchema)
