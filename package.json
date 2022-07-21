@@ -4,7 +4,7 @@
   "description": "````MongoDB\r nodejs\r express\r axios```\r ````",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
