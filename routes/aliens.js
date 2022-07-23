@@ -46,6 +46,7 @@ router.post('/', async (req, res) => {
 // post request method
 router.patch('/:id', async (req, res) => {
     try {
+        console.log(req.params.id)
         const alien = await Alien.findById(req.params.id)
         alien.remedy = req.body.remedy
         const a1 = await alien.save()
@@ -55,5 +56,21 @@ router.patch('/:id', async (req, res) => {
     }
 
 })
+//search by name
+router.get('/search/:key', async (req, res) => {
+    try{
+    let d = await Alien.find(
+        {
+            "$or":[
+                {name:{$regex:req.params.key}}
+            ]
+        }
+    )
+    res.send(d);
+}catch(err){
+    res.send('error')
+}
+})
+
 
 module.exports = router
