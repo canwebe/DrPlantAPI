@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require("body-parser");
 const dotenv = require('dotenv').config()
-
+const cors = require("cors")
 const app = express()
 
 mongoose.connect(process.env.MONGODB_URI, {
@@ -21,6 +21,9 @@ con.on('open', () => {
 })
 
 app.use(express.json())
+app.use(cors({
+    origin: "*",
+}))
 
 const alienRouter = require('./routes/aliens')
 app.use('/disease', alienRouter)
